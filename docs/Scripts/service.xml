@@ -1,0 +1,63 @@
+<SERVICES>
+    <SERVICE>
+        <SACTIVITY>Weekend Backpacking Trip</SACTIVITY>
+        <SPRICE>$750</SPRICE>
+        <SDESCRIPTION>3-day backpacking trip from Mapleton Depot to the Martins Gap via the Standing Stone Trail. Includes all meals.</SDESCRIPTION>
+    </SERVICE>
+</SERVICES>
+<SERVICES>
+    <SERVICE>
+        <SACTIVITY>Week Backpacking Trip</SACTIVITY>
+        <SPRICE>$1400</SPRICE>
+        <SDESCRIPTION>5-day backpacking trip from Cowans Gap State Park to Greenwood Furnace State Park via the Standing Stone Trail. Includes all meals.</SDESCRIPTION>
+    </SERVICE>
+</SERVICES>
+<SERVICES>
+    <SERVICE>
+        <SACTIVITY>Backpacking Trek</SACTIVITY>
+        <SPRICE>$2800</SPRICE>
+        <SDESCRIPTION>14-day backpacking trip from Michaux State Forest, PA to Cascade, MD.</SDESCRIPTION>
+    </SERVICE>
+</SERVICES>
+<SERVICES>
+    <SERVICE>
+        <SACTIVITY>Bouldering</SACTIVITY>
+        <SPRICE>$200</SPRICE>
+        <SDESCRIPTION>1-day excursion to Pulpit Rocks, Huntingdon from 1 PM to 6 PM.</SDESCRIPTION>
+    </SERVICE>
+</SERVICES>
+<SERVICES>
+    <SERVICE>
+        <SACTIVITY>Top-Roping Day</SACTIVITY>
+        <SPRICE>$400</SPRICE>
+        <SDESCRIPTION>From 9 AM to 5 PM.</SDESCRIPTION>
+    </SERVICE>
+</SERVICES>
+<SERVICES>
+    <SERVICE>
+        <SACTIVITY>Rappeling Self-Rescue</SACTIVITY>
+        <SPRICE>$800</SPRICE>
+        <SDESCRIPTION>2-day course from 9 AM to 5 PM.</SDESCRIPTION>
+    </SERVICE>
+</SERVICES>
+<SERVICES>
+    <SERVICE>
+        <SACTIVITY>Lead Climbing</SACTIVITY>
+        <SPRICE>$1200</SPRICE>
+        <SDESCRIPTION>2-day course from 9 AM to 5 PM.</SDESCRIPTION>
+    </SERVICE>
+</SERVICES>
+<SERVICES>
+    <SERVICE>
+        <SACTIVITY>Map-Compass</SACTIVITY>
+        <SPRICE>$400</SPRICE>
+        <SDESCRIPTION>Offered from 9 AM to 5 PM.</SDESCRIPTION>
+    </SERVICE>
+</SERVICES>
+<SERVICES>
+    <SERVICE>
+        <SACTIVITY>GPS</SACTIVITY>
+        <SPRICE>$400</SPRICE>
+        <SDESCRIPTION> Offered from 9 AM to 5 PM.</SDESCRIPTION>
+    </SERVICE>
+</SERVICES>

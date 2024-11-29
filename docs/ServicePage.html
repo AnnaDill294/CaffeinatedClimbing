@@ -8,18 +8,9 @@
 	<link rel="stylesheet" type="text/css" href="StyleSheets/mystyle.css">
 </head>
 <body onload="loadDoc()">
-
-
-<script>
-/*
-Data fields from the xml file
-ROOT - SERVICES>
-    ELEMENT - SERVICE>
         ELEMENT - <SACTIVITY/>Climbing
-        ELEMENT - <SPRICE/>$400
-        ELEMENT - <SDESCRIPTION/>Top-Roping Day
- */        
 
+<script>      
 function loadDoc() {
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
@@ -27,34 +18,28 @@ function loadDoc() {
 			myFunction(this);
 		}
 	};
-	xhttp.open("GET", "https://annadill294.github.io/CaffeinatedClimbing/Scripts/service.xml", true);
+	xhttp.open("GET", "Scripts/service.xml", true);
 	xhttp.send();
 }
-	
 function myFunction(xml) {
 	var i;
 	var xmlDoc = xml.responseXML;
 	var divcols='<div class="row">';
 	divcols += '   <div class="col-md-4"><b>Activity</b></div>';
 	divcols += '   <div class="col-md-4"><b>Price</b></div>';
-	divcols += '   <div class="col-md-4"><b>Description</b></div>;
+	divcols += '   <div class="col-md-4"><b>Description</b></div>';
 	divcols += '</div>';
-// -- WHAT IS LOADED INTO THE DIVCOLS VARIABLE
-//  --  console.log(divcols);
-// ---------------------------------------
-	var x = xmlDoc.getElementsByTagName("SERVICE")
-	for (i = 0; i <x.length; i++) { 
+	var x = xmlDoc.getElementsByTagName("SERVICE");
+	for (i = 0; i <x.length; i++) { 
 		divcols += '<div class="row">';
 		divcols += '<div class="col-md-4">' + x[i].getElementsByTagName("SACTIVITY")[0].childNodes[0].nodeValue + '</div>';
 		divcols += '<div class="col-md-4">' + x[i].getElementsByTagName("SPRICE")[0].childNodes[0].nodeValue + '</div>';
         divcols += '<div class="col-md-4">' + x[i].getElementsByTagName("SDESCRIPTION")[0].childNodes[0].nodeValue + '</div>';
 		divcols += '</div>';
 	}
-	document.getElementById("mycontainer").innerHTML = divcols;
+	document.getElementById("myservices").innerHTML = divcols;
 }
 </script>
-
-<div id="mycontainer">
 
 <div class="header">
   <h1>Services</h1>
@@ -68,92 +53,21 @@ function myFunction(xml) {
   <a href="#">Contact Us</a>
 </div>
 
-<h5>Backpacking</h5>
-<table>
-    <thead>
-      <tr>
-        <th>Activity</th>
-        <th>Price</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-
-<h5>Climbing</h5>
-<table>
-    <thead>
-      <tr>
-        <th>Activity</th>
-        <th>Price</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-
-<h5>Navigation</h5>
-<table>
-    <thead>
-      <tr>
-        <th>Activity</th>
-        <th>Price</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-
-</div>
-
+<div id="mycontainer">
+  <div id="myservices">
+    <div class="row">
+    <div class="col-md-4">
+      <b>Activity</b>
+      </div>
+    <div class="col-md-4">
+      <b>Price</b>
+      </div>
+      <div class="col-md-4">
+      <b>Description</b>
+      </div>
+          </div>
+    </div>
+  </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>  

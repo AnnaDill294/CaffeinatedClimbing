@@ -34,22 +34,62 @@ function testMe(frm) {
   <a href="#">Merchandise</a>
 </div>
 
-
-<div class="container mt-3">
-  <div class="card" style="width:300xp">
-    <div class="card-body">
-      <h4 class="card-title">Pursuit of Passion</h4>
-      <img class="card-img-top" src="Images/holly-mandarich-girl-backpacking.jpg" alt="Backpacking Becky" style="width:100%">
-      <p class="card-text">Week Backpacking Trip</p>
-      <p class="card-text">July 17th, 2024</p>
-      <p class="card-text">Becky Smith</p>
-      <p class="card-text">"Without a clear sense of direction in life, I always felt a deep connection to the mountains. Conquering both literal peaks and personal challenges has not only helped me discover my identity as an adventurer but also inspired me to guide others on their own journeys into adventure."</p>
-      <p class="card-text">Becky, a 26-year-old wildlife conservation student, is passionate about protecting the natural world and sharing her love for adventure. Despite starting with no backpacking experience, she has embraced the challenge, honing her skills and rising to become a confident leader of the pack. Soon, she'll be joining our team to help others discover their potential and embark on unforgettable adventures of their own. Mary's journey proves that with determination and a willingness to learn, anyone can transform into an inspiring adventurer.</p>
-      <a href="#" class="btn btn-primary">Learn more</a>
-    </div>
-  </div>
-</div>
   
+<script>
+function fetchJSONData() {
+	fetch("./customer.json").then((res) => {
+		if (!res.ok) {
+			throw new Error(`HTTP error! Status: ${res.status}`);
+        }
+        return res.json();
+	})
+    .then((data) => {
+/*
+        rs =  '<div class="row">';
+		rs += '   <div class="col-md-4"><h4>Manufacturer</h4></div>';
+		rs += '   <div class="col-md-4"><h4>Item Name</h4></div>';
+		rs += '   <div class="col-md-4"><h4>Item Cost</h4></div>';
+		rs += '</div>';
+*/
+		for(i=0;i<data.length;i++) {
+			rs += '<div class="container mt-3">';
+  			rs += '<div class="card" style="width:300xp">';
+    			rs += '<div class="card-body">';
+      			rs += '<h4 class="card-title">' + data[i].adventurename + '</h4>';
+      			rs += '<img class="card-img-top" src="Images/' + data[i].adventurephoto + '" alt="Backpacking Becky" style="width:100%">';
+      			rs += '<p class="card-text">' + data[i].adventuredate + '</p>';
+      			//rs += '<p class="card-text">July 17th, 2024</p>';
+      			rs += '<p class="card-text">' + data[i].costumername + '</p>';
+      			rs += '<p class="card-text">"' + data[i].customerquote + '"</p>';
+      			rs += '<p class="card-text">' + data[i].customerstmt + '</p>';
+                rs += '<p class="card-text">' + data[i].descriptionfile + '</p>';
+      			rs += '<a href="#" class="btn btn-primary">Learn more</a>';
+    			rs += '</div>';
+  			rs += '</div>';
+			rs += '</div>';
+/*
+			rs += '<div class="row">';
+			rs += '   <div class="col-md-4">' + data[i].gear_manu + '</div>';
+			rs += '   <div class="col-md-4">' + data[i].gear_name + '</div>';
+			rs += '   <div class="col-md-4">' + data[i].gear_cost + '</div>';
+			rs += '</div>';
+*/
+		} 
+		document.getElementById("recordset").innerHTML = rs;
+	})
+	.catch((error) =>
+		console.error("Unable to fetch data:", error));
+}
+fetchJSONData();
+
+</script>
+
+<!-- Code to repeat -->
+
+
+<div id="recordset"></div>
+
+<!-- 
 <div class="container mt-3">
   <div class="card" style="width:300xp" >
     <div class="card-body">
@@ -63,7 +103,7 @@ function testMe(frm) {
       <a href="#" class="btn btn-primary">Learn more</a>
     </div>
   </div>
-
+-->
 <form method="GET">
 <p>
     <label for="name">Name: </label>
